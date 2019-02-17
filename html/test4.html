@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ul</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        li{
+            list-style: none;
+        }
+        .list{
+            background-color: #fff000;
+        }
+        .menu>.list{
+
+            display: inline-block;
+        }
+        .st{
+            display: none;
+        }
+        .menu>li:hover>.st{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li  class="list">
+        <a href="">1</a>
+        <ul class="st">
+            <li>11</li>
+            <li>12</li>
+        </ul>
+    </li>
+    <li class="list">
+        <a href="">2</a>
+        <ul class="st">
+            <li>21</li>
+            <li>22</li>
+        </ul>
+
+    </li>
+</ul>
+
+</body>
+</html>
