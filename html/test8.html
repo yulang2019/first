@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父子元素子元素居中</title>
+    <style type="text/css">
+        .farther1{
+            width: 600px;
+            height: 600px;
+            background-color: #eeeeee;
+            position: relative;
+        }
+        .son1{
+            width: 400px;
+            height: 400px;
+            background-color: #fff000;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -200px;
+        }
+        .farther2{
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            overflow: hidden;
+        }
+        .son2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+           margin-top: 150px;
+           margin-left: 150px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="farther1">
+    <div class="son1"></div>
+</div>
+<div class="farther2">
+    <div class="son2"></div>
+</div>
+
+</body>
+</html>
