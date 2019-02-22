@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转的正方体</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        /*    background-color: #ff8079;*/
+            perspective: 600px;
+            perspective-origin: 50% 50%;
+
+        }
+        .father{
+            margin: 200px auto;
+          width: 200px;
+            height: 200px;
+      /*      border: 10px dotted #ff0000;*/
+           transform-style: preserve-3d;
+
+
+            animation: rotate  3s linear forwards  infinite;
+
+        }
+        .square{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: rgba(24,156,110,0.3);
+            text-align: center;
+            line-height: 200px;
+            font-size: 60px;
+        }
+        .son1{
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        .son2{
+            transform: rotateX(90deg) translateZ(-100px)  ;
+        }
+        .son3{
+            transform: rotateY(90deg)   translateZ(-100px);
+        }
+        .son4{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .son5{
+            transform: translateZ(100px);
+        }
+        .son6{
+            transform: translateZ(-100px);
+        }
+        @-webkit-keyframes rotate {
+            to{
+                transform: rotateY(360deg) ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son1 square">1</div>
+    <div class="son2 square">2</div>
+    <div class="son3 square">3</div>
+    <div class="son4 square">4</div>
+    <div class="son5 square">5</div>
+    <div class="son6 square">6</div>
+</div>
+
+</body>
+</html>
