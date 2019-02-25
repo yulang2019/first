@@ -30,16 +30,47 @@
         }
         sum1();
 
-        function sum12 {
-            for(var i=1;i<=5;i++)
-            {
-                For(var j=1;j<=i;j++){
-                Console.Log(j+&nbsp;+<br/>)
+        function sum2() {
+            for (var i = 1; i <= 5; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write(j + "&nbsp;" );
+                }
+                document.write(" <br/>");
             }
-            }
-            return sum;
         }
-        sum1();
+
+        sum2();
+
+        function sum3() {
+            for (var i = 1; i <= 5; i++) {
+                for (var j = 1; j <=5 - i ; j++) {
+                    document.write("&nbsp;");
+                }
+                for (var z = 1; z <= 6 - j ; z++) {
+                        document.write("*");
+                    }
+                    document.write("<br>");
+
+
+                }
+
+        }
+        sum3();
+
+
+        function sum4() {
+
+            for (var x=100;x<=999;x++)
+            {
+
+            if( (x%4==2)&&(x%7==3)&&(x%9==5)){
+                document.write(x+'<br/>');
+            }
+            }
+        }
+
+        sum4();
+
 
 
 
