@@ -67,6 +67,9 @@
                 document.write(x+'<br/>');
             }
             }
+
+
+
         }
 
         sum4();
@@ -74,9 +77,9 @@
 
             for (var x=1000;x<=9999;x++)
             {
-                if((x%13==0)&&((x/1000)==(x%1000)/100+(x%100)/10))
+                if(x%13==0&&(Math.floor(x/1000))==Math.floor((x%1000)/100)+Math.floor((x%100)/10))
             {
-                document.write(x);
+                document.write(x+"<br/>");
             }
 
             }
