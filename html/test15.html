@@ -113,7 +113,7 @@ temp[7]=t2[4];e
                     }
                 Merge("123","abcfff");
         */
-        function Merge(s1,s2){
+    /*    function Merge(s1,s2){
             var t1=s1;
             var t2=s2;
             var temp=Array();
@@ -128,7 +128,74 @@ temp[7]=t2[4];e
         }
 
 
+        }*/
+   /*     function Fibonacci(n){
+            var arr=new Array();
+            var are=new Array();
+           
+            var count=0;
+            arr[0]=1;
+            arr[1]=1;
+            for(i=2;i<n;i++)
+            {
+                arr[i]=arr[i-1]+arr[i-2];
+    
+           
+            }
+            are=arr.reverse();
+            for(var j=0;j<n;j++){
+                document.write(are[j]+"&nbsp;");
+                count++;
+                if(count%6==0)
+                {
+                    document.write("<br/>");
+                }
+
         }
+        }
+        Fibonacci(40);*/
+       function IsLeapYear(y) {
+            if((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)){
+                return true;
+            }
+            return false;
+        }
+
+
+        function DayOfYear(d) {
+            var year1 = d.getFullYear();
+            var month1 = d.getMonth();
+            var day1 = d.getDay();
+            var total = 0;
+            var today=0;
+            var months1 = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+            var months2 = new Array(31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+            if (IsLeapYear(year1)) {
+                for (var i = 0; i < month1; i++) {
+
+                    today = +today + months1[i];
+                }
+                today = today + day1;
+            }
+            else {
+                for (var j = 0; j < month1; j++) {
+
+                     today = +today + months2[j];
+                }
+                today = today + day1;
+            }
+            document.write(today);
+
+
+        }
+        var t=new Date();
+        DayOfYear(t);
+       
+
+
+
+
+
        
 
 
