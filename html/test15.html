@@ -48,8 +48,89 @@
                     }
                     CollectDigits("123c45d0");
 
-*/
-        
+*/              
+ /*5.将两个字符串交叉合并的函数Merge(s1,s2)，
+ 例如Merge("123","abc"）
+ 的返回结果是"1a2b3c"，
+ 如果两个字符串的长度不同
+ 0 1 2 3 4 5  0 1 2 3 4
+ 1 2 3        a b c d e 
+
+ 0 1 2 3 4 5 6 7 8 9 10
+ 1 a  2
+
+temp[0]=t1[0];1
+temp[1] =t2[0];a
+
+temp[2]=t1[1];2
+temp[3]=t2[1];b
+
+temp[4]=t1[2];3
+temp[5]=t2[2];c
+
+temp[6]=t2[3];d
+temp[7]=t2[4];e
+
+
+
+
+
+ 那么就将多余部分直接合并到结果字符串的末尾
+ ，如Merge("123456",''abc''）的返回结果是”1a2b3c456”。*/
+            /*    function Merge(s1,s2){
+                    var t1=new Array();
+                    t1=s1.split("");
+                    var t2=new Array();
+                    t2=s2.split("");
+                    var temp=new Array();
+                    if(t1.length==t2.length)
+                    {
+                    for(var i=0;i<t1.length;i++)
+                    {
+                            temp[2*i]=t1[i];
+                            temp[2*i+1]=t2[i];
+                    }
+                    document.write(temp);
+                    }
+                   else{
+                    var b=Math.abs(t1.length-t2.length);
+                    var max=  Math.max(t1.length,t2.length)//4
+                    var min=Math.min(t1.length,t2.length);//3
+                       for(var i=0;i<=min;i++)
+                       {
+                        temp[2*i]=t1[i];
+                            temp[2*i+1]=t2[i];
+                       }
+                       for(var j=min+2;j<=max;j++)
+                       {
+                                 temp[j]=t2[j];
+                       }
+                       document.write(temp);
+                   }
+                
+
+
+                    }
+                Merge("123","abcfff");
+        */
+        function Merge(s1,s2){
+            var t1=s1;
+            var t2=s2;
+            var temp=Array();
+            var max=  Math.max(t1.length,t2.length);
+            document.write(t1+t2+max);
+            for(var i=0;i<max;i++)
+            {
+           if(t1.length>t2.length)
+           {
+            
+           }
+        }
+
+
+        }
+       
+
 
 
 
