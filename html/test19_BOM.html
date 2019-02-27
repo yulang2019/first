@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOM</title>
+    <style>
+    body{
+        height: 1500px;
+        background-color: #008080;
+    }
+    </style>
+</head>
+<body >
+    <button    id="move">
+        顶部
+    </button>
+    <script>
+       
+        var scrollMove=document.getElementById("move");
+        scrollMove.onclick=function(){
+           moveBy(0,3);
+
+        }
+
+    </script>
+</body>
+</html>
