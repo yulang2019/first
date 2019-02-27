@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>右键菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 70px;
+            border: 1px solid #9f009f;
+            display: none;
+            position: absolute;
+            left:0px;
+            top:0px;
+        }
+        li{
+            list-style: none;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            background-color: #c1c184;
+            border-bottom: 1px dotted #9f009f;
+        }
+        li:hover{
+            background-color: #408080;
+            cursor: pointer;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div>
+        hello，2019/2/27；
+        </div>
+    <ul class="father" id="father">
+        <li class="son">son1</li>
+        <li class="son">son2</li>
+        <li class="son">son3</li>
+        <li class="son">son4</li>
+        <li class="son">son5</li>
+    </ul>
+    <script>
+        var ulFather=document.getElementById("father");
+        var lson=ulFather.getElementsByTagName('li');
+        document.oncontextmenu=function(e){
+        e=e||window.event;
+        ulFather.style.display="block";
+        ulFather.style.left=e.clientX+"px";
+        ulFather.style.top=e.clientY+"px";
+        return false;
+        };
+        document.onclick=function(){
+            ulFather.style.display="none";
+        };
+            for(var i=0;i<lson.length;i++)
+            {
+                lson[i].onclick=function(){
+                   console.log(this.innerHTML);
+                };
+            }
+
+        
+    </script>
+    
+</body>
+</html>
