@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态选项卡t</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .wrap{
+         position: relative;
+         width: 300px;
+         height: 300px;
+         margin: 100px auto;
+         background-color: #c0c0c0;
+     }
+     .father{
+         width: 300px;
+         height: 50px;
+         background-color: #89c5c5;
+        
+     }
+     li{
+         list-style: none;
+     }
+     .son{
+         display: inline-block;
+         border: 1px solid #00d200;
+         padding:10px;
+         background-color: #f0f000;
+         margin: 10px;   
+         cursor: pointer;
+     }
+    
+     .content{
+         width: 290px;
+         height: 200px;
+         border: 1px solid #ff8000;
+         position:absolute;
+        display: none;
+     }
+     .content1{
+        left:0px;
+        top:50px;
+        display:block;
+     }
+     .content2{
+        left:290px;
+        top:50px;
+     }
+     .content3{
+        left:580px;
+        top:50px;
+
+     }
+    li:hover{
+        background-color: #fff;
+    }
+    
+    
+
+</style>
+<body>
+    <div class="wrap">
+    <ul class="father">
+        <li class="son" id="son1">html</li>
+        <li class="son" id="son2">css</li>
+        <li class="son" id="son3">javascript</li>
+       
+    </ul>
+    <div class="content1 content" id="content1">content1</div>
+    <div class="content2 content" id="content2">content2</div>
+    <div class="content3 content" id="content3">content3 </div>
+    </div>    
+    <script>
+        var son11=document.getElementById("son1");
+        var son12=document.getElementById("son2");
+        var son13=document.getElementById("son3");
+        var content11=document.getElementById("content1");
+        var content12=document.getElementById("content2");
+        var content13=document.getElementById("content3");
+        son11.onmouseover=function(){
+            content12.style.display="none";
+            content13.style.display="none";
+            content11.style.display="block";
+            
+        };
+        son12.onmouseover=function(){
+            content12.style.display="block";
+            content12.style.left=0+"px";
+            content11.style.display="none";
+            content13.style.display="none";
+        };
+        son13.onmouseover=function(){
+            content13.style.display="block";
+            content13.style.left=0+"px";
+            content11.style.display="none";
+            content12.style.display="none";
+        };
+    </script>
+</body>
+</html>
