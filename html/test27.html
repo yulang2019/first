@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>同级元素的外边距问题</title>
+    <style>
+        .div1{
+            background-color: #4b994b;
+            width: 100px;
+            height: 100px;
+           position: absolute;
+           top:0;
+           left:0;
+          
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background-color: #af6a35;  
+            position: absolute;
+            margin-top: 200px;
+            top:0;
+            left:0;
+          
+           
+        }
+        .div{
+            width: 500px;
+            height: 500px;
+            border: 20px solid #808040;
+         /*   position: relative;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+    <div class="div1"></div>
+    <div class="div2"></div>
+</div>
+    
+</body>
+</html>
