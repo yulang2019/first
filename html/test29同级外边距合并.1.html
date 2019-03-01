@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>position</title>
+    <title>同级外边距合并</title>
     <style>
         .div1{
-            width: 300px;
-            border: 10px solid #008040;
+            width: 100px;
             height: 100px;
-           display: inline-block;
-           margin-bottom: 100px;/*疑问此处的margin-bottom为什么会影响div2*/
+            background: #008040;
+            margin-bottom: 100px;
+          
+
         }
         .div2{
-            width: 300px;
-            border: 10px solid #008040;
+            width: 100px;
             height: 100px;
-            display: inline-block;
+            background: #004040;
+            margin-top: 100px;
+            
         }
     </style>
 </head>
 <body>
     <div class="div1"></div>
-   <div class="div2"></div>
+    <div class="div2"></div>
 </body>
 </html>
