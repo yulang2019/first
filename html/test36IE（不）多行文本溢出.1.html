@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>（IE6不支持）多行省略号</title>
+    <style>
+        .div{
+            border: 1px solid #a3b9de;
+            width: 120px;
+            height: 40px;
+        
+            overflow: hidden;
+      }
+        .ellipsis::after{
+            content: "...";
+            display: inline;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="div">今天是2019年03月02日，路见不平，拔刀相助！</div>
+    <span class="ellipsis"></span>
+   
+    
+</body>
+</html>

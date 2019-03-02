@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多行省略号</title>
+    <style>
+        .div{
+            border: 1px solid #a3b9de;
+            width: 120px;
+            height: 40px;
+            overflow: hidden;
+            padding-right: 12px;/* 留出省略号位置 */
+            position: relative;
+      }
+      .ellipsis{
+          position: absolute;
+         right:2px;
+         bottom: 0;
+      }
+    </style>
+</head>
+<body>
+    <div class="div">今天是2019年03月02日，路见不平，拔刀相助<span class="ellipsis">...</span></div>
+
+   
+    
+</body>
+</html>
